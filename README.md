@@ -9,10 +9,20 @@ It calls the Poisson instance of the *Random* class to generate two arrays of si
 
 * *poisson_analysis.py* This script is the only one that takes user input. It takes as input the number of exposures (-Nexp), sky photon rate (-sky), read noise rate (-read). The script then calls *signal_noise_generator.py* and calculates p-vals for each pair signal/noise sample pairs. The result is creation of a directory specific to the run that contains text files of the p-values, signals, and noises along with a PDF that plots p-values as a function of signal rate. 
 
+* *Random.py* Random class which generates random samples; includes Poisson instance used in this package.
 # Usage:
 
 ```python
 python poisson_analysis -Nexp 10 -read 1 -sky 5
 ```
 
+# Dependencies 
+
+This code requires:
+
+* Python 3.7.3
+* Scipy v1.6.0
+* Numpy v1.19.2
+* MatplotLib v3.3.2
+* TQDM v4.56.0
 
